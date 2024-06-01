@@ -83,7 +83,7 @@
         <div class="row">
             <div class="col-10" style="background: linear-gradient(0.45turn,#607de7 35%, #cbd6fd); margin-left: 3.3rem; width: 82.4rem; height: 11rem; border-radius: 15px; margin-top: 2rem;">
                 <div class="col-auto">
-                    <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 35px; font-weight: 600; margin-top: 1.2rem; color: whitesmoke">Welcome to Lancelot, John Doe <img src="/pics/wavinghand.png" alt="" style="width: 2.5rem; height: 2.5rem; transform:scaleX(-1); margin-left: 0.5rem; margin-top: -0.5rem;"></h3>
+                    <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 35px; font-weight: 600; margin-top: 1.2rem; color: whitesmoke">Welcome to Lancelot, {{auth()->user()->name}}<img src="/pics/wavinghand.png" alt="" style="width: 2.5rem; height: 2.5rem; transform:scaleX(-1); margin-left: 0.5rem; margin-top: -0.5rem;"></h3>
                 </div>
                 <div class="col-auto" style="display: flex;">
                     <div class="col-6" style="background-color: rgba(245, 245, 245, 0.664); height: 3.8rem; border-radius: 10px; margin-top: 1rem; width: 38rem; cursor: pointer;">
@@ -95,6 +95,14 @@
                 </div>
             </div>
         </div>
+        @php
+            $categories1=json_decode($jobs[0]->category_name, true);// Logo Designing
+            $categories2=json_decode($jobs[1]->category_name, true);// Website Branding
+            $categories3=json_decode($jobs[2]->category_name, true);// Copywriting
+            $categories4=json_decode($jobs[3]->category_name, true);// Auditing
+            $categories5=json_decode($jobs[4]->category_name, true);// Photographer
+        @endphp
+
 
         <div class="row">
             <div class="col-12">
@@ -114,55 +122,58 @@
                 </ul>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
-                <img class="card-img-top" src="pics/logodesigner.webp" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
+                <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="logodesigning.html" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">Logo Designing</h5></a>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Holland Creatindo</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 300.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Graphic Design</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Art</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories1[1]}}</span>
                 <i id="hearticon" class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
-                <img class="card-img-top" src="pics/logodesigner.webp" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: grey;">
+                <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Logo Designing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Holland Creatindo</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 300.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Graphic Design</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Art</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories1[1]}}</span>
                 <i id="hearticon" class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
-                <img class="card-img-top" src="pics/logodesigner.webp" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
+                <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Logo Designing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Holland Creatindo</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 300.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Graphic Design</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Art</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories1[1]}}</span>
                 <i id="hearticon" class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
-                <img class="card-img-top" src="pics/logodesigner.webp" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
+                <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Logo Designing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Holland Creatindo</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 300.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Graphic Design</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Art</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories1[1]}}</span>
                 <i id="hearticon" class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
-        </div>
-
+           
+            
+           
+         </div>
+       
         <div class="row">
             <div class="col-12">
                 <!-- <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 25px; font-weight: 600; margin-left: 3rem; margin-top: 2rem;">Explore Jobs</h3>
@@ -179,61 +190,62 @@
                 </div>
 
             </div>
-
-            <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 3.2rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/logodesigner.webp" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:#516ed7;">
+            
+            <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Logo Designing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Holland Creatindo</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 300.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Graphic Design</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Art</span>
-                <i id="hearticon" class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories1[1]}}</span>
+                <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
+            
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/website-branding.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[1]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Website Branding</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Phylo Co.</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 700.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Social Media</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[1]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[1]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[1]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories2[0]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/copywriting.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[2]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Copywriting</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Yuzuki Entertainment</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 650.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Copywriting</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Media</span>
+                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[2]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[2]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[2]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories3[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories3[1]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/financial-audit.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[3]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Auditing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Realty Tbk</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 900.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Finance</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Economy</span>
+                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[3]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[3]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[3]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories4[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories4[1]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/360_F_238524282_UFHlp9Ct3RjudSVHSQoI6yLACAgSQI2k.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[4]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Photographer</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">DSC Club</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 400.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Photography</span>
+                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[4]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[4]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[4]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories5[0]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
@@ -262,60 +274,61 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 3.2rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/logodesigner.webp" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:#516ed7;">
+            <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Logo Designing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Holland Creatindo</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 300.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Graphic Design</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Art</span>
-                <i id="hearticon" class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;" onclick="changeColor(this)"></i>
+                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories1[1]}}</span>
+                <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
+            
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/website-branding.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[1]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Website Branding</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Phylo Co.</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 700.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Social Media</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[1]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[1]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[1]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories2[0]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/copywriting.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[2]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Copywriting</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Yuzuki Entertainment</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 650.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Copywriting</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Media</span>
+                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[2]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[2]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[2]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories3[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories3[1]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/financial-audit.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[3]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Auditing</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">Realty Tbk</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 900.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Finance</span>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">Economy</span>
+                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[3]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[3]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[3]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories4[0]}}</span>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories4[1]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                <img class="card-img-top" src="pics/360_F_238524282_UFHlp9Ct3RjudSVHSQoI6yLACAgSQI2k.jpg" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                <img class="card-img-top" src="{{asset($jobs[4]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">Photographer</h5>
-                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">DSC Club</p>
-                <p class="card-text" style="margin-left: -0.5rem;">Rp. 400.000,-</p>
-                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">Photography</span>
+                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[4]->job_name}}</h5></a>
+                <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[4]->client_name}}</p>
+                <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[4]->job_salary}},-</p>
+                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories5[0]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
