@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Auth;
 class JobController extends Controller
 {
-    public function index()
+    public function indexJob()
     {
         $jobs = Job::all(); // Ambil semua data job dari database
         return view('homepage', compact('jobs'));

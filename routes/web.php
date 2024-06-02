@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,7 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/testing', function () {
         return view('testing');
     });
-    Route::get('/homepage', [JobController::class, 'index']);
+    // Route::get('/homepage', [JobController::class, 'indexJob']);
+    Route::get('/homepage', [HomepageController::class, 'indexHomepage']);
 });
 
 require __DIR__.'/auth.php';

@@ -114,11 +114,11 @@
             </div>
             <div class="col-4" style="font-family: 'DM Sans'; font-size: 18px; margin-left: 0.5rem; width: 21rem">
                 <ul id="ulli"style="list-style: none; margin-top: 1rem;">
-                    <li id="gd" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">Graphic Design</li>
-                    <li id="socmed" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">Social Media</li>
-                    <li id="finance" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">Finance</li>
-                    <li id="itengineering" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">IT & Engineering</li>
-                    <li id="voiceover" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">Voice Over</li>
+                    <li id="gd" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">{{$categories[0]->category_name}}</li>
+                    <li id="socmed" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">{{$categories[1]->category_name}}</li>
+                    <li id="finance" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">{{$categories[2]->category_name}}</li>
+                    <li id="itengineering" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">{{$categories[3]->category_name}}</li>
+                    <li id="voiceover" style="margin-top: 1.5rem; border-style: solid; padding-left: 2rem; height: 3rem; align-content: center; border-radius: 10px; width: 17rem; cursor: pointer; border-color: rgba(158, 157, 157, 0.747);">{{$categories[4]->category_name}}</li>
                 </ul>
             </div>
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
