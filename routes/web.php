@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +28,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
     Route::get('/homepage', function () {
         return view('homepage');
+    });
+    Route::get('/editprofile', function () {
+        return view('editprofile');
     });
     //testing
     Route::get('/testing', function () {
@@ -39,6 +44,8 @@ Route::middleware('auth')->group(function () {
     });
     // Route::get('/homepage', [JobController::class, 'indexJob']);
     Route::get('/homepage', [HomepageController::class, 'indexHomepage']);
+    Route::get('/user/{id}/edit', [UserProfileController::class, 'edit'])->name('user.edit');
+    Route::post('/user/{id}/update', [UserProfileController::class, 'updateProfile'])->name('user.update');
 });
 
 require __DIR__.'/auth.php';

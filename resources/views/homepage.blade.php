@@ -70,15 +70,7 @@
             </div>
         </div> -->
         <div class="down-part2">
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-
-                <a href="route('logout')"
-                        onclick="event.preventDefault();
-                                    this.closest('form').submit();">
-                   Log Out
-                </a>
-            </form>
+         
         </div>
         <div class="row">
             <div class="col-10" style="background: linear-gradient(0.45turn,#607de7 35%, #cbd6fd); margin-left: 3.3rem; width: 82.4rem; height: 11rem; border-radius: 15px; margin-top: 2rem;">
@@ -86,8 +78,12 @@
                     <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 35px; font-weight: 600; margin-top: 1.2rem; color: whitesmoke">Welcome to Lancelot, {{auth()->user()->name}}<img src="/pics/wavinghand.png" alt="" style="width: 2.5rem; height: 2.5rem; transform:scaleX(-1); margin-left: 0.5rem; margin-top: -0.5rem;"></h3>
                 </div>
                 <div class="col-auto" style="display: flex;">
+            
                     <div class="col-6" style="background-color: rgba(245, 245, 245, 0.664); height: 3.8rem; border-radius: 10px; margin-top: 1rem; width: 38rem; cursor: pointer;">
-                        <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 20px; font-weight: 400; padding-top: 1.1rem; padding-left: 5rem;">Complete your profile</h3>
+                        <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration:none">
+                            <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 20px; font-weight: 400; padding-top: 1.1rem; padding-left: 5rem;">Complete your profile</h3>
+                        </a>
+                       
                     </div>
                     <div class="col-6" style="background-color: rgba(245, 245, 245, 0.664); height: 3.8rem; border-radius: 10px; margin-top: 1rem; width: 38rem; margin-left: 3rem; cursor: pointer;">
                         <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 20px; font-weight: 400; padding-top: 1.1rem; padding-left: 5rem;">Get working now!</h3>
