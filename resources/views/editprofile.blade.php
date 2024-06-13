@@ -32,7 +32,7 @@
             </div>
             <div class="col-1" id="findajob" style="padding-top: 1.9rem;">
                 <i class="fa-solid fa-briefcase" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Find a job</a>
+                <a href="/explorejobs" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Find a job</a>
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>

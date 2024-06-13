@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ExploreJobController;
 use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,8 +36,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/homepage', function () {
         return view('homepage');
     });
+    Route::get('/seejobdetail1', function () {
+        return view('seejobdetail1');
+    });
     Route::get('/editprofile', function () {
         return view('editprofile');
+    });
+    Route::get('/explorejobs', function () {
+        return view('explorejobs');
     });
     //testing
     Route::get('/testing', function () {
@@ -44,8 +51,10 @@ Route::middleware('auth')->group(function () {
     });
     // Route::get('/homepage', [JobController::class, 'indexJob']);
     Route::get('/homepage', [HomepageController::class, 'indexHomepage']);
+    Route::get('/explorejobs', [ExploreJobController::class, 'indexExploreJob']);
     Route::get('/user/{id}/edit', [UserProfileController::class, 'edit'])->name('user.edit');
     Route::post('/user/{id}/update', [UserProfileController::class, 'updateProfile'])->name('user.update');
+    Route::get('/jobs/{id}', [JobController::class, 'showDetailJob'])->name('jobs.showDetail');
 });
 
 require __DIR__.'/auth.php';

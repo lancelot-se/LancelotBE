@@ -20,6 +20,7 @@ class CategoryFactory extends Factory
         'Media',
         'Economy',
         'Photography',
+        'Makeup'
     ];
 
     public function definition()

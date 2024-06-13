@@ -15,5 +15,10 @@ class JobController extends Controller
         $jobs = Job::all(); // Ambil semua data job dari database
         return view('homepage', compact('jobs'));
     }
+    public function showDetailJob($id)
+    {
+        $jobdetail=Job::findOrFail($id);
+        return view('seejobdetail1', compact('jobdetail'));
+    }
 }
 

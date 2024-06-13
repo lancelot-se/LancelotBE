@@ -31,6 +31,7 @@ class JobFactory extends Factory
             'description' => $job['description'],
             'job_salary' => $job['job_salary'],
             'category_name' => json_encode([$category['category_name']]), // Menggunakan kategori dari seeder CategorySeeder
+            'job_deadline' =>$job['job_deadline']
         ];
     }
 }

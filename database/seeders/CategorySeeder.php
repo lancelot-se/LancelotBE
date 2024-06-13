@@ -11,7 +11,7 @@ class CategorySeeder extends Seeder
     {
         // Logic untuk menambahkan data kategori
         // Contoh:
-        Category::factory()->count(10)->create();
+        Category::factory()->count(11)->create();
         // Tambahkan kategori lainnya sesuai kebutuhan
     }
 }

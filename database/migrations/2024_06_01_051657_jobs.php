@@ -16,6 +16,7 @@ class jobs extends Migration
             $table->text('description');
             $table->integer('job_salary');
             $table->json('category_name');
+            $table->date('job_deadline');
             $table->timestamps();
         });
     }

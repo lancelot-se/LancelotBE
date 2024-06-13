@@ -28,7 +28,7 @@
             </div>
             <div class="col-1" id="findajob" style="padding-top: 1.9rem;">
                 <i class="fa-solid fa-briefcase" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Find a job</a>
+                <a href="/explorejobs" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Find a job</a>
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
@@ -80,7 +80,7 @@
                 <div class="col-auto" style="display: flex;">
             
                     <div class="col-6" style="background-color: rgba(245, 245, 245, 0.664); height: 3.8rem; border-radius: 10px; margin-top: 1rem; width: 38rem; cursor: pointer;">
-                        <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration:none">
+                        <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration:none; color:black;">
                             <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 20px; font-weight: 400; padding-top: 1.1rem; padding-left: 5rem;">Complete your profile</h3>
                         </a>
                        
@@ -120,7 +120,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
                 <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <a href= "{{ route('jobs.showDetail', $jobs[0]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
@@ -132,7 +132,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
                 <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[0]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
@@ -144,7 +144,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
                 <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[0]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
@@ -156,7 +156,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1rem; border-radius: 10px; cursor: pointer; border-color: none; height:fit-content;">
                 <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color:grey;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[0]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
@@ -179,7 +179,7 @@
                         <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 25px; font-weight: 600; margin-left: 2.5rem; margin-top: 2rem;">Explore Jobs</h3>
                     </div>
                     <div class="col-auto">
-                        <a href="explorejobs.html">
+                        <a href="/explorejobs">
                             <i class="fa-solid fa-chevron-right" style="font-size: 20px; margin-top: 1.6rem; margin-left: 70.6rem; color: black"></i>
                         </a>    
                     </div>
@@ -190,7 +190,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[0]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
@@ -203,7 +203,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[1]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[1]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[1]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[1]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[1]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[1]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories2[0]}}</span>
@@ -214,7 +214,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[2]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[2]->job_name}}</h5></a>
+                    <a href="{{ route('jobs.showDetail', $jobs[2]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[2]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[2]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[2]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories3[0]}}</span>
@@ -226,7 +226,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[3]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[3]->job_name}}</h5></a>
+                    <a href="{{ route('jobs.showDetail', $jobs[3]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[3]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[3]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[3]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories4[0]}}</span>
@@ -238,7 +238,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[4]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[4]->job_name}}</h5></a>
+                    <a href="{{ route('jobs.showDetail', $jobs[4]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[4]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[4]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[4]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories5[0]}}</span>
@@ -273,7 +273,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[0]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
+                    <a href="{{ route('jobs.showDetail', $jobs[0]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[0]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[0]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[0]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories1[0]}}</span>
@@ -286,7 +286,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[1]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[1]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[1]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[1]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[1]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[1]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories2[0]}}</span>
@@ -297,7 +297,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[2]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[2]->job_name}}</h5></a>
+                    <a href="{{ route('jobs.showDetail', $jobs[2]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[2]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[2]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[2]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories3[0]}}</span>
@@ -309,7 +309,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[3]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[3]->job_name}}</h5></a>
+                <a href="{{ route('jobs.showDetail', $jobs[3]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[3]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[3]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[3]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories4[0]}}</span>
@@ -321,7 +321,7 @@
             <div class="card" style="width: 15rem; margin-top: 1rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                 <img class="card-img-top" src="{{asset($jobs[4]->job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                 <div class="card-body" style="font-family: 'DM Sans';">
-                    <a href="/testing" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[4]->job_name}}</h5></a>
+                    <a href="{{ route('jobs.showDetail', $jobs[4]->id) }}" style="text-decoration: none;"><h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem; color: black;">{{$jobs[4]->job_name}}</h5></a>
                 <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$jobs[4]->client_name}}</p>
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[4]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories5[0]}}</span>
