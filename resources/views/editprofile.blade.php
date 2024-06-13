@@ -39,7 +39,10 @@
                 <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
-                <img src="{{ asset('pics/profile_freelancer.png') }}" alt="">
+                <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration: none">
+                    <img src="{{ asset('pics/profile_freelancer.png') }}" alt="">
+                </a>
+               
             </div>
         </div>
         <div class="row">
@@ -77,7 +80,7 @@
                         </ul>
                         <h3 style="background-color: none; font-size: 22px; text-align: center; margin-top: 1.5rem; font-weight: 600;">Account Settings</h3>
                         <ul class="list-group">
-                            <a href="/editprofile"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-top: 1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-pencil" style="margin-left: 1rem; margin-right:1rem;"></i>Edit Profile<i class="fa-solid fa-chevron-right" style="margin-left: 3.7rem;"></i></button></a>
+                            <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-top: 1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-pencil" style="margin-left: 1rem; margin-right:1rem;"></i>Edit Profile<i class="fa-solid fa-chevron-right" style="margin-left: 3.7rem;"></i></button></a>
                             <a href="/settings"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-bottom: 0.5rem;"><i class="fa-solid fa-gear" style="margin-left: 1rem; margin-right:1rem;"></i>Settings<i class="fa-solid fa-chevron-right" style="margin-left: 4.8rem;"></i></button></a>
                            
                             <form method="POST" action="{{ route('logout') }}">

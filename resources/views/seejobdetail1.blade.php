@@ -38,14 +38,17 @@
                 <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
-                <img src={{asset('pics\profile_freelancer.png')}} alt="">
+                <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration: none">
+                    <img src={{asset('pics\profile_freelancer.png')}} alt="">
+                </a>
+               
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="row align-items-center">
                         <div class="col-auto">
-                            <a href="/homepage">
+                            <a href="/explorejobs">
                                 <i class="fa-solid fa-chevron-left" style="font-size: 20px; margin-top: 1.6rem; margin-left: 3.7rem; color: black"></i>
                             </a>    
                         </div>

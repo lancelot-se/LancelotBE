@@ -20,7 +20,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 pt-3">
-                <img src="pics/logo lancelot.svg" alt="logo lancelot" style="width: 150px; height: 50px; margin-left: 3.5rem;">
+                <a href="/homepage">
+                    <img src="pics/logo lancelot.svg" alt="logo lancelot" style="width: 150px; height: 50px; margin-left: 3.5rem;">
+                </a>
             </div>
             <div class="col-6 pt-3">
                 <input class="shadow p-3 mb-4 bg-white rounded col-12" type="text" placeholder="Search jobs" style="width: 40rem; height: 2.5rem; margin-top: 0.4rem; padding-left: 1rem; border-radius: 7px; border-style: none; font-family: 'DM Sans';">
@@ -86,7 +88,9 @@
                        
                     </div>
                     <div class="col-6" style="background-color: rgba(245, 245, 245, 0.664); height: 3.8rem; border-radius: 10px; margin-top: 1rem; width: 38rem; margin-left: 3rem; cursor: pointer;">
-                        <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 20px; font-weight: 400; padding-top: 1.1rem; padding-left: 5rem;">Get working now!</h3>
+                        <a href="/explorejobs" style="text-decoration:none; color:black;">
+                            <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 20px; font-weight: 400; padding-top: 1.1rem; padding-left: 5rem;">Get working now!</h3>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -263,7 +267,7 @@
                         <h3 class="display-6" style="font-family: 'DM Sans'; font-size: 25px; font-weight: 600; margin-left: 2.4rem; margin-top: 2rem;">Recommended For You</h3>
                     </div>
                     <div class="col-auto">
-                        <a href="recommended.html">
+                        <a href="/explorejobs">
                         <i class="fa-solid fa-chevron-right" style="font-size: 20px; margin-top: 1.6rem; margin-left: 63rem; color: black;"></i>
                         </a>
                     </div>
