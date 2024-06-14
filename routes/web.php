@@ -6,7 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ExploreJobController;
 use App\Http\Controllers\UserProfileController;
-use App\Http\Controllers\ApplyJobController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,35 +14,37 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Here is where you can register web routes for your application.
 |
 */
+
 Route::get('/', function () {
     return view('splashscreen');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Dashboard
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+    // Homepage and Explore Jobs
     Route::get('/homepage', [HomepageController::class, 'indexHomepage']);
     Route::get('/explorejobs', [ExploreJobController::class, 'indexExploreJob']);
 
-    // Route to edit user profile
+    // User Profile
     Route::get('/user/{id}/edit', [UserProfileController::class, 'edit'])->name('user.edit');
     Route::post('/user/{id}/update', [UserProfileController::class, 'updateProfile'])->name('user.update');
 
-    // Route to view job details
+    // Job Routes
     Route::get('/jobs/{id}', [JobController::class, 'showDetailJob'])->name('jobs.showDetail');
-
-    // Route to show job application form
     Route::get('/jobs/{id}/apply', [JobController::class, 'showDetailJob2'])->name('jobs.apply');
+    Route::post('/apply-job/{id}', [JobController::class, 'applyJob'])->name('apply.job');
 
-    // Route to process job application
-    // Route::post('/activejobs/{id}/apply', [ApplyJobController::class, 'applyJob'])->name('activejobs.apply');
+    // Success Route
+    Route::get('/success/{id}', [JobController::class, 'showSuccess'])->name('success');
+
 });
 
+// Include authentication routes
 require __DIR__.'/auth.php';
