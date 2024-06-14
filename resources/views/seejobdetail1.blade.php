@@ -111,7 +111,7 @@
                                         <h3 style="font-size: 1.8rem; font-family: 'DM Sans'">{{$jobdetail->job_deadline}}</h3>
                                     </div>
                                     <div class="col-12">
-                                        <a href="seejobdetail2.html" class="btn btn-primary btn-lg btn-block" style="background-color: #516ED7; padding:1em; font-family: 'DM Sans'; font-weight: 500; font-size:1.25rem; color: white; text-decoration: none;">
+                                        <a href="{{ route('jobs.apply', $jobdetail->id) }}" class="btn btn-primary btn-lg btn-block" style="background-color: #516ED7; padding:1em; font-family: 'DM Sans'; font-weight: 500; font-size:1.25rem; color: white; text-decoration: none;">
                                             Apply
                                         </a>
                                     </div>

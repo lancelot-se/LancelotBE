@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>profile</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
     <script src="https://kit.fontawesome.com/7563b17235.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -96,8 +96,10 @@
                 <div class="row" style="background-color: none; height: 25rem;">
                     <form action="{{ route('user.update', ['id' => $user->id]) }}"  method="POST" style="background-color: none;">
                         @csrf
-                        <div class="row" style="background-color: none; margin-top: 1rem;">
-                            <div class="dot" style="border-style: none; width: 7rem; height: 7rem; border-radius: 100px; background-color: rgb(179, 179, 179); margin-top: 0rem; margin-left: 30rem; cursor: pointer;"></div>
+                        <div class="row" style="margin-top: 1rem;">
+                            <div class="dot" style="width: 7rem; height: 7rem; border-radius: 50%; background-color: rgb(179, 179, 179); margin-top: 0rem; margin-left: 30rem; overflow: hidden; position: relative;">
+                                <img src="{{ asset('pics/profile_freelancer.png') }}" alt="" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                            </div>
                         </div>
                         <div class="row" style="background-color: none; margin-top: 2rem; width: 45rem; margin-left: 12rem;">
                             <div class="col-11">
@@ -195,5 +197,6 @@
             </div>
         </div>
     </footer>
+    <script src="{!! asset('/js/script.js') !!}"></script>
 </body>
 </html>

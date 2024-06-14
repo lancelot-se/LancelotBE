@@ -20,5 +20,12 @@ class JobController extends Controller
         $jobdetail=Job::findOrFail($id);
         return view('seejobdetail1', compact('jobdetail'));
     }
+    public function showDetailJob2($id)
+    {
+        $jobdetail = Job::findOrFail($id); 
+        return view('seejobdetail2', compact('jobdetail'));
+        return redirect()->route('jobs.showDetail', $id);
+    }
+
 }
 
