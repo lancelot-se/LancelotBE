@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>On Going Jobs</title>
+    <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
     <script src="https://kit.fontawesome.com/7563b17235.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -22,7 +21,7 @@
         <div class="row">
             <div class="col-2 pt-3">
                 <a href="/homepage">
-                    <img src="{{ asset('pics/logo lancelot.svg') }}" alt="logo lancelot" style="width: 150px; height: 50px; margin-left: 3.5rem;">
+                    <img src="pics/logo lancelot.svg" alt="logo lancelot" style="width: 150px; height: 50px; margin-left: 3.5rem;">
                 </a>
               
             </div>
@@ -39,23 +38,30 @@
                 <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
-                <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration: none">
-                    <img src="{{ asset('pics/profile_freelancer.png') }}" alt="">
-                </a>
-               
+                <img src="pics\profile_freelancer.png" alt="">
             </div>
         </div>
         <div class="row">
             <div class="col-11" style="background-color: #516ed7d8; height: 20rem; margin-top: 2rem; margin-left: 2.7rem; width: 84rem; ">
+                <div class="dot" style="border-style: none; width: 9.5rem; height: 9.5rem; border-radius: 100px; background-color: rgb(179, 179, 179); margin-top: 15rem; margin-left: 3rem; overflow: hidden; position: relative;">
+                    
+                        <img src="{{ asset('pics/profile_freelancer.png') }}" alt="" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                   
+                </div>
+               
+            </div>
+            <div class="col-12" style="background-color: whitesmoke; height: 9rem; z-index: -1; width: 84rem; margin-left: 2.7rem;">
+                <p class="freelancername" style="font-family: 'DM Sans'; z-index: 1000; margin-left: 19rem; margin-top: 0.8rem; font-size: 26px; font-weight: 600; background-color: none; width: 10rem;"> {{auth()->user()->name}}</p>
+                <p class="freelanceremail" style="font-family: 'DM Sans'; z-index: 1000; margin-left: 19rem; margin-top: -1rem; font-size: 15px; font-weight: 400; background-color: none; width: 10rem;"> {{auth()->user()->email}}</p>
             </div>
         </div>
         <div class="row" style="background-color: none;">
             <div class="col-3">
                 <div class="profile-contactinfo" style="margin-top: 3rem; margin-bottom: 2rem; margin-left: 2rem;">
                     <div class="contact-info" style="border-style: solid; height: 20rem; border-radius: 15px; border-color: rgb(179, 179, 179);">
-                        <p class="phonenum" style="margin-left: 3.5rem;margin-top: 1.5rem; font-family: 'DM Sans';"><i class="fas fa-phone fa-flip-horizontal" style="margin-right: 1rem;"></i> {{auth()->user()->phone_number}}</p>
-                
-                        <p class="freelanceremail" style="margin-left: 3.5rem;margin-top: 1rem; font-family: 'DM Sans';"><i class="fas fa-envelope" style="margin-right: 1rem;"></i>{{auth()->user()->email}}</p>
+                        <p class="phonenum" style="margin-left: 3.5rem;margin-top: 1.5rem; font-family: 'DM Sans';"><i class="fas fa-phone fa-flip-horizontal" style="margin-right: 1rem;"></i>  {{auth()->user()->phone_number}}</p>
+                        <p class="linkedin" style="margin-left: 3.5rem;margin-top: 1rem; font-family: 'DM Sans';"><i class="fab fa-linkedin" style="margin-right: 1rem;"></i>  {{auth()->user()->name}}</p>
+                        <p class="freelanceremail" style="margin-left: 3.5rem;margin-top: 1rem; font-family: 'DM Sans';"><i class="fas fa-envelope" style="margin-right: 1rem;"></i>  {{auth()->user()->email}}</p>
                         <button class="btn btn-primary btn-block" style="background-color: #516ed7d8; width:10rem; border-radius: 50px; margin-left: 4.2rem; margin-top: 1rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); border-color: #516ed7d8;">PORTFOLIO</button>
                         <div id="ratingnum" class="col-4" style="background-color: none; margin-left: 2.3rem;">
                             <h2 style="font-family: 'DM Sans'; width: 4rem; font-size: 47px; margin-left: 0rem; margin-top: 2rem; font-weight: 300;">5.0</h2>
@@ -82,7 +88,6 @@
                         <ul class="list-group">
                             <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-top: 1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-pencil" style="margin-left: 1rem; margin-right:1rem;"></i>Edit Profile<i class="fa-solid fa-chevron-right" style="margin-left: 3.7rem;"></i></button></a>
                             <a href="/testing"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-bottom: 0.5rem;"><i class="fa-solid fa-gear" style="margin-left: 1rem; margin-right:1rem;"></i>Settings<i class="fa-solid fa-chevron-right" style="margin-left: 4.8rem;"></i></button></a>
-                           
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <a href="route('logout')"><button type="submit" class="btn btn-primary btn-block" style="border-style: solid; background: rgba(251, 111, 111, 0.712); color: black; border-color: rgb(179, 179, 179); text-align: left; padding-left: 3.8rem;">Logout<i class="fa-solid fa-arrow-right-from-bracket" style="margin-left: 5.3rem;"></i></button></a>
@@ -92,57 +97,35 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9" style="margin-top: -4rem;">
-                <div class="row" style="background-color: none; height: 25rem;">
-                    <form action="{{ route('user.update', ['id' => $user->id]) }}"  method="POST" style="background-color: none;">
-                        @csrf
-                        <div class="row" style="margin-top: 1rem;">
-                            <div class="dot" style="width: 7rem; height: 7rem; border-radius: 50%; background-color: rgb(179, 179, 179); margin-top: 0rem; margin-left: 30rem; overflow: hidden; position: relative;">
-                                <img src="{{ asset('pics/profile_freelancer.png') }}" alt="" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          
+            <div class="col-9">
+                <div class="row" style="background-color: none; margin-top: 3rem;">
+                    <h3 style="font-family: 'DM Sans'; font-weight: 600;">Ongoing Jobs</h3>
+                </div>
+                <div class="row">
+                    @foreach ($activeJob as $activeJobs)
+                    @php
+                         $categoriesdetail=json_decode($activeJobs->active_job_category_name, true);
+                      @endphp
+                       
+                        <div class="card" style="width: 15rem; margin-top: 2rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
+                            <img class="card-img-top" src="{{asset($activeJobs->active_job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                            <div class="card-body" style="font-family: 'DM Sans';">
+                                <a href="" style="text-decoration: none; color:black"> <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">{{$activeJobs->active_job_name}}</h5></a>
+                            <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$activeJobs->active_job_client_name}}</p>
+                            <p class="card-text" style="margin-left: -0.5rem;">Rp.{{$activeJobs->active_job_salary}},-</p>
+                            @if (isset($categoriesdetail[0]))
+                            <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categoriesdetail[0]}}</span>
+                            @endif
+                            @if (isset($categoriesdetail[1]))
+                                <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categoriesdetail[1]}}</span>
+                            @endif
+                    
+                            <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                             </div>
                         </div>
-                        <div class="row" style="background-color: none; margin-top: 2rem; width: 45rem; margin-left: 12rem;">
-                            <div class="col-11">
-                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1.2rem; color: grey">Full Name</h3>
-                            </div>
-                            <div class="col-11 pt-3" style="margin-top: -1rem;">
-                                <input type="text" name="name"class=" email_login form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="{{$user->name}}" style="height: 2.5rem; font-family:'DM Sans'; font-size: 0.85rem; border:none;">
-                            </div>
-                        </div>
-                        <div class="row" style="background-color: none; margin-top: -0.5rem; width: 45rem; margin-left: 12rem;">
-                            <div class="col-11">
-                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1.2rem; color: grey">Email</h3>
-                            </div>
-                            <div class="col-11 pt-3" style="margin-top: -1rem;">
-                                <input type="email" name="email" class=" email_login form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="{{$user->email}}" style="height: 2.5rem; font-family:'DM Sans'; font-size: 0.85rem; border:none;">
-                            </div>
-                        </div>
-                        <div class="row" style="background-color: none; margin-top: -0.5rem; width: 45rem; margin-left: 12rem;">
-                            <div class="col-11">
-                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1.2rem; color: grey">Phone Number</h3>
-                            </div>
-                            <div class="col-11 pt-3" style="margin-top: -1rem;">
-                                <input type="text" name="phone_number"class=" email_login form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="{{$user->phone_number}}" style="height: 2.5rem; font-family:'DM Sans'; font-size: 0.85rem; border:none;">
-                            </div>
-                        </div>
-                        <div class="row" style="background-color: none; margin-top: -0.5rem; width: 45rem; margin-left: 12rem;">
-                            <div class="col-11">
-                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1.2rem; color: grey">Address</h3>
-                            </div>
-                            <div class="col-11 pt-3" style="margin-top: -1rem;">
-                                <input type="text" name="address" class=" email_login form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="{{$user->address}}" style="height: 2.5rem; font-family:'DM Sans'; font-size: 0.85rem; border:none;">
-                            </div>
-                        </div>
-                        <div class="row" style="background-color: none; margin-top: -0.5rem; width: 45rem; margin-left: 12rem;">
-                            <div class="col-11">
-                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1.2rem; color: grey">Password</h3>
-                            </div>
-                            <div class="col-11 pt-3" style="margin-top: -1rem;">
-                                <input type="password" name="password" class=" email_login form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="**********" style="height: 2.5rem; font-family:'DM Sans'; font-size: 0.85rem; border:none;">
-                            </div>
-                        </div>
-                        <button style="width: 5rem; height: 2.5rem; color: #5D9426; font-family: 'DM Sans'; font-weight: 500; border-radius: 8px; border-color: none; border-style: none; background: #D0F5AB; margin-left: 30.5rem; margin-top: -4rem;">Save</button>
-                    </form>
+                   @endforeach
                 </div>
             </div>
         </div>

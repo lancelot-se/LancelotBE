@@ -27,7 +27,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
+    Route::get('/testing', function () {
+        return view('testing');
+    });
     // Homepage and Explore Jobs
     Route::get('/homepage', [HomepageController::class, 'indexHomepage']);
     Route::get('/explorejobs', [ExploreJobController::class, 'indexExploreJob']);
@@ -43,6 +45,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // Success Route
     Route::get('/success/{id}', [JobController::class, 'showSuccess'])->name('success');
+
+    // active jobs route
+    Route::get('/showactivejobs', [JobController::class, 'showActiveJobs'])->name('showactivejobs');
 
 });
 

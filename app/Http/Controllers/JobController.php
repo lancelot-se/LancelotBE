@@ -39,18 +39,25 @@ class JobController extends Controller
             $user=auth()->user();
             $job=Job::findOrFail($id);
             $activeJob = new ActiveJob();
-            $activeJob->job_image = $job->job_image;
-            $activeJob->job_name = $job->job_name;
-            $activeJob->client_name = $job->client_name;
-            $activeJob->description = $job->description;
-            $activeJob->job_salary = $job->job_salary;
-            $activeJob->category_name = $job->category_name;
-            $activeJob->job_deadline = $job->job_deadline;
+            $activeJob->active_job_user_id=$user->id;
+            $activeJob->active_job_image = $job->job_image;
+            $activeJob->active_job_name = $job->job_name;
+            $activeJob->active_job_client_name = $job->client_name;
+            $activeJob->active_job_description = $job->description;
+            $activeJob->active_job_salary = $job->job_salary;
+            $activeJob->active_job_category_name = $job->category_name;
+            $activeJob->active_job_deadline = $job->job_deadline;
             $activeJob->save();
             return redirect()->route('success', ['id' => $job->id])->with('success', 'Lamaran pekerjaan berhasil.');
 
         }
         
+    }
+    public function showActiveJobs(){
+        $user=auth()->user();
+        $activeJob=ActiveJob::where('active_job_user_id', $user->id)->get();
+        return view('activejobs', compact('activeJob'));
+
     }
 
     

@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('table_active_jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('job_image')->nullable();
-            $table->string('job_name');
-            $table->string('client_name');
-            $table->text('description');
-            $table->integer('job_salary');
-            $table->json('category_name');
-            $table->date('job_deadline');
+            $table->unsignedBigInteger('active_job_user_id');
+            $table->string('active_job_image')->nullable();
+            $table->string('active_job_name');
+            $table->string('active_job_client_name');
+            $table->text('active_job_description');
+            $table->integer('active_job_salary');
+            $table->json('active_job_category_name');
+            $table->date('active_job_deadline');
             $table->timestamps();
         });
     }

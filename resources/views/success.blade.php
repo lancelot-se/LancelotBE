@@ -43,30 +43,31 @@
             </div>
         </div>
         @php
-        $categoriesdetail=json_decode($jobdetail->category_name, true);// Logo Designing
+        $categoriesdetail=json_decode($jobdetail->category_name, true);
     
          @endphp
         <div class="row" style="background-color: none; margin-top: 4rem; height: 50rem;">
             <div class="col-11" style="background-color: none; margin-left: 3.7rem; border-style: solid; border-color: #516ed7; border-radius: 15px; display: flex;">
                 <div class="col-5" style="background-color: black; border-style: solid; border-radius: 10px; height: 48rem; margin-top: 0.8rem;">
                     <h3 style="font-family: 'DM Sans'; background-color: none; color: whitesmoke; margin-left: 1rem; margin-top: 1rem; font-weight: 600;">Application Summary</h3>
-                    <h3 style="font-family: 'DM Sans'; background-color: none; color: grey; font-size: 23px; margin-left: 1rem; font-weight: 600; margin-top: 3.5rem;">Job Name</h3>
+                    <h3 style="font-family: 'DM Sans'; background-color: none; color: grey; font-size: 23px; margin-left: 1rem; font-weight: 600; margin-top: 2.5rem;">Job Name</h3>
                     <h3 style="font-family: 'DM Sans'; background-color: none; color: whitesmoke; font-size: 20px; margin-left: 1rem; font-weight: 600; margin-top: 0rem;">{{$jobdetail->job_name}}</h3>
                     
                     <h3 style="font-family: 'DM Sans'; background-color: none; color: grey; font-size: 23px; margin-left: 1rem; font-weight: 600; margin-top: 2rem;">Job Category</h3>
                   
 
-                    <span>
+                    <div>
                         @if (isset($categoriesdetail[0]))
-                        <h3 style="font-family: 'DM Sans'; background-color: none; color: whitesmoke; font-size: 20px; margin-left: 1rem; font-weight: 600; margin-top: 0rem;"> {{ $categoriesdetail[0] }}</h3>
+                        <h6 style="font-family: 'DM Sans'; background-color: none; color: whitesmoke; font-size: 20px; margin-left: 1rem; font-weight: 600; margin-top: 0rem;"> {{ $categoriesdetail[0] }}
                          
                         @endif
                        @if (isset($categoriesdetail[1]))
                        @if (isset($categoriesdetail[0])), 
                         @endif
-                        <h3 style="font-family: 'DM Sans'; background-color: none; color: whitesmoke; font-size: 20px; margin-left: 1rem; font-weight: 600; margin-top: 0rem;"> {{ $categoriesdetail[1] }}</h3>
+                        {{ $categoriesdetail[1] }}
                         @endif
-                    </span>
+                    </h6>
+                    </div>
                     
                     <h3 style="font-family: 'DM Sans'; background-color: none; color: grey; font-size: 23px; margin-left: 1rem; font-weight: 600; margin-top: 2rem;">Job Description</h3>
                     <h3 style="font-family: 'DM Sans'; background-color: none; color: whitesmoke; font-size: 20px; margin-left: 1rem; font-weight: 600; margin-top: 0rem;">{{$jobdetail->description}}</h3>
