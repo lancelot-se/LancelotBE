@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/7563b17235.js" crossorigin="anonymous"></script>
-    <title>splash screen</title>
+    <title>Lancelot</title>
 </head>
 <body>
     <div id="header">

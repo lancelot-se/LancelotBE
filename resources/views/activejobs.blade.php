@@ -111,7 +111,7 @@
                         <div class="card" style="width: 15rem; margin-top: 2rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
                             <img class="card-img-top" src="{{asset($activeJobs->active_job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                             <div class="card-body" style="font-family: 'DM Sans';">
-                                <a href="" style="text-decoration: none; color:black"> <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">{{$activeJobs->active_job_name}}</h5></a>
+                                <a href="{{ route('finish.job', $activeJobs->id) }}" style="text-decoration: none; color:black"> <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">{{$activeJobs->active_job_name}}</h5></a>
                             <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$activeJobs->active_job_client_name}}</p>
                             <p class="card-text" style="margin-left: -0.5rem;">Rp.{{$activeJobs->active_job_salary}},-</p>
                             @if (isset($categoriesdetail[0]))

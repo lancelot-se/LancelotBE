@@ -48,6 +48,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // active jobs route
     Route::get('/showactivejobs', [JobController::class, 'showActiveJobs'])->name('showactivejobs');
+    Route::get('/activejobs/{id}', [JobController::class, 'showFinishJob'])->name('finish.job');
 
 });
 

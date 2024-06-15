@@ -59,6 +59,10 @@ class JobController extends Controller
         return view('activejobs', compact('activeJob'));
 
     }
+    public function showFinishJob($id){
+        $activeJob = ActiveJob::findOrFail($id);
+        return view('finish', compact('activeJob'));
+    }
 
     
 }
