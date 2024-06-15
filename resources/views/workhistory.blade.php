@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On Going Jobs</title>
-    <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
+    <title>History Jobs</title>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <script src="https://kit.fontawesome.com/7563b17235.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -23,7 +23,6 @@
                 <a href="/homepage">
                     <img src="pics/logo lancelot.svg" alt="logo lancelot" style="width: 150px; height: 50px; margin-left: 3.5rem;">
                 </a>
-              
             </div>
             <div class="col-6 pt-3">
                 <input class="shadow p-3 mb-4 bg-white rounded col-12" type="text" placeholder="Search jobs" style="width: 40rem; height: 2.5rem; margin-top: 0.4rem; padding-left: 1rem; border-radius: 7px; border-style: none; font-family: 'DM Sans';">
@@ -35,7 +34,7 @@
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
+                <a href="/testing" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
                 <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration: none">
@@ -91,6 +90,7 @@
                         <ul class="list-group">
                             <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-top: 1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-pencil" style="margin-left: 1rem; margin-right:1rem;"></i>Edit Profile<i class="fa-solid fa-chevron-right" style="margin-left: 3.7rem;"></i></button></a>
                             <a href="/testing"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-bottom: 0.5rem;"><i class="fa-solid fa-gear" style="margin-left: 1rem; margin-right:1rem;"></i>Settings<i class="fa-solid fa-chevron-right" style="margin-left: 4.8rem;"></i></button></a>
+                           
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <a href="route('logout')"><button type="submit" class="btn btn-primary btn-block" style="border-style: solid; background: rgba(251, 111, 111, 0.712); color: black; border-color: rgb(179, 179, 179); text-align: left; padding-left: 3.8rem;">Logout<i class="fa-solid fa-arrow-right-from-bracket" style="margin-left: 5.3rem;"></i></button></a>
@@ -100,23 +100,23 @@
                     </div>
                 </div>
             </div>
-          
             <div class="col-9">
                 <div class="row" style="background-color: none; margin-top: 3rem;">
-                    <h3 style="font-family: 'DM Sans'; font-weight: 600;">Ongoing Jobs</h3>
+                    <h3 style="font-family: 'DM Sans'; font-weight: 600;">Work History</h3>
                 </div>
                 <div class="row">
-                    @foreach ($activeJob as $activeJobs)
+                    
+                    @foreach ($historyJob as $historyJobs)
                     @php
-                         $categoriesdetail=json_decode($activeJobs->active_job_category_name, true);
+                         $categoriesdetail=json_decode($historyJobs->history_job_category_name, true);
                       @endphp
                        
                         <div class="card" style="width: 15rem; margin-top: 2rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
-                            <img class="card-img-top" src="{{asset($activeJobs->active_job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
+                            <img class="card-img-top" src="{{asset($historyJobs->history_job_image)}}" alt="Card image cap" style="width: 100%; height: 46%; align-self: center; margin-top: 0.5rem; border-radius: 10px; border-style: solid; border-color: #516ed7;">
                             <div class="card-body" style="font-family: 'DM Sans';">
-                                <a href="{{ route('finish.job', $activeJobs->id) }}" style="text-decoration: none; color:black"> <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">{{$activeJobs->active_job_name}}</h5></a>
-                            <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$activeJobs->active_job_client_name}}</p>
-                            <p class="card-text" style="margin-left: -0.5rem;">Rp.{{$activeJobs->active_job_salary}},-</p>
+                            <a href="" style="text-decoration: none; color:black"> <h5 class="card-title" style="font-weight: 600; margin-left: -0.5rem;">{{$historyJobs->history_job_name}}</h5></a>
+                            <p class="clientposter" style="margin-top: -0.5rem; font-size: 15px; margin-left: -0.5rem;">{{$historyJobs->history_job_client_name}}</p>
+                            <p class="card-text" style="margin-left: -0.5rem;">Rp.{{$historyJobs->history_job_salary}},-</p>
                             @if (isset($categoriesdetail[0]))
                             <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categoriesdetail[0]}}</span>
                             @endif

@@ -34,7 +34,7 @@
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
+                <a href="/testing" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
                 <!-- disini harusnya ada masukin profile circle, tapi bingung how!!  -->

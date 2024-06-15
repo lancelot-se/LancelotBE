@@ -36,7 +36,7 @@
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
+                <a href="/testing" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
                 <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration: none">
@@ -76,7 +76,7 @@
                         <ul class="list-group">
                             <a href="/testing"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; text-decoration: none; margin-bottom: 0.5rem;"><i class="fa-regular fa-heart" style="margin-left: 1rem; margin-right:1rem;"></i>Favorites<i class="fa-solid fa-chevron-right" style="margin-left: 4.5rem;"></i></button></a>
                             <a href="/showactivejobs"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-bottom: 0.5rem;"><i class="fa-solid fa-briefcase" style="margin-left: 1rem; margin-right:1rem;"></i>Ongoing Jobs<i class="fa-solid fa-chevron-right" style="margin-left: 2.3rem;"></i></button></a>
-                            <a href="workhistory.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left;"><i class="fa-solid fa-book-bookmark" style="margin-left: 1rem; margin-right:1rem;"></i>Work History<i class="fa-solid fa-chevron-right" style="margin-left: 2.8rem;"></i></button></a>
+                            <a href="/showHistory"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left;"><i class="fa-solid fa-book-bookmark" style="margin-left: 1rem; margin-right:1rem;"></i>Work History<i class="fa-solid fa-chevron-right" style="margin-left: 2.8rem;"></i></button></a>
                         </ul>
                         <h3 style="background-color: none; font-size: 22px; text-align: center; margin-top: 1.5rem; font-weight: 600;">Account Settings</h3>
                         <ul class="list-group">

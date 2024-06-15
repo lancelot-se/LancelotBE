@@ -50,6 +50,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/showactivejobs', [JobController::class, 'showActiveJobs'])->name('showactivejobs');
     Route::get('/activejobs/{id}', [JobController::class, 'showFinishJob'])->name('finish.job');
 
+    // history jobs route
+    Route::post('/finish-job/{id}', [JobController::class, 'finishJob'])->name('historyJobs');
+    Route::get('/showHistory', [JobController::class, 'showHistory'])->name('showHistory');
+
+
 });
 
 // Include authentication routes

@@ -112,11 +112,16 @@
            
         <div class="row">
             <div class="col-12" style="padding: 8rem;">
-                <a href="success.html" class="btn btn-primary btn-lg btn-block" style="background-color: #516ED7; padding:1em; font-family: 'DM Sans'; font-weight: 500; font-size:1.25rem; color: white; text-decoration: none;">
-                    Finish
-                </a>
+                <form action="{{ route('historyJobs', ['id' => $activeJob->id]) }}" method="POST">
+                    @csrf
+                    <button  class="btn btn-primary btn-lg btn-block" style="background-color: #516ED7; padding:1em; font-family: 'DM Sans'; font-weight: 500; font-size:1.25rem; color: white; text-decoration: none;", type="submit">
+                        Finish
+                    </button>
+                </form>
+               
             </div>
         </div> 
+        
     </div>
     <footer class="footer" style="background-color: #516ed7; height: 30rem; margin-top: 5rem;">
         <div class="container" style="background-color: black; height: 22rem; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
