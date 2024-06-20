@@ -37,7 +37,7 @@
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
+                <a href="/testing" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
                 <img src="pics\profile_freelancer.png" alt="">
@@ -116,7 +116,7 @@
                 </div>
                 <script src="seejobdetail2.js" defer></script>
                 
-                <!-- hiks masi gabisa check buttonnya T-T -->
+            
                 <div class="row pb-4">
                     <div class="col-3">
                         <div class="input-group">

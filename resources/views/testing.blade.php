@@ -7,7 +7,6 @@
     <title>Testing</title>
 </head>
 <body>
-    <h1>testing</h1>
-    <img src="pics/logo lancelot.svg" alt="logo lancelot" style="width: 150px; height: 50px; margin-left: 3.5rem;">
+    <h1>New Features Coming Soon ......</h1>
 </body>
 </html>

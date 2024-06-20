@@ -27,7 +27,7 @@
             </div>
             <div class="col-6 pt-3">
                 <input class="shadow p-3 mb-4 bg-white rounded col-12" type="text" placeholder="Search jobs" style="width: 40rem; height: 2.5rem; margin-top: 0.4rem; padding-left: 1rem; border-radius: 7px; border-style: none; font-family: 'DM Sans';">
-                <!-- <i class="fa-solid fa-magnifying-glass" style="background-color: aqua; z-index: -1; margin-left: -2rem;"></i> -->
+          
             </div>
             <div class="col-1" id="findajob" style="padding-top: 1.9rem;">
                 <i class="fa-solid fa-briefcase" style="font-size: 15px;"></i>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
+                <a href="/testing" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
                 <a href="{{ route('user.edit', ['id' => Auth::user()->id]) }}" style="text-decoration: none">

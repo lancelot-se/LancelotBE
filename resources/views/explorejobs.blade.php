@@ -34,7 +34,7 @@
             </div>
             <div class="col-2" id="readarticles" style="padding-top: 1.9rem">
                 <i class="fa-solid fa-newspaper" style="font-size: 15px;"></i>
-                <a href="" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
+                <a href="/testing" style="color: black; font-family: 'DM Sans'; font-size: 15px; text-decoration: none;">Read Articles</a>
             </div>
             <div class="col-1 pt-3">
                 <!-- disini harusnya ada masukin profile circle, tapi bingung how!!  -->
@@ -174,7 +174,7 @@
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[5]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories6[0]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+               
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 2rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
@@ -186,7 +186,6 @@
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories7[0]}}</span>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories7[1]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 2rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
@@ -209,7 +208,6 @@
                 <p class="card-text" style="margin-left: -0.5rem;">Rp. {{$jobs[8]->job_salary}},-</p>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories9[0]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
             <div class="card" style="width: 15rem; margin-top: 2rem; margin-left: 1.8rem; border-radius: 10px; cursor: pointer; border-color: #516ed7;">
@@ -221,7 +219,6 @@
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px; margin-left: -0.5rem;">{{$categories10[0]}}</span>
                 <span class="badge badge-pill badge-primary" style="background-color: #516ed7; border-radius: 50px; font-size: 13px;">{{$categories10[1]}}</span>
                 <i class="fa-regular fa-heart" style="font-size: 20px; float: right; padding-top: 0.15rem;"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
         </div>

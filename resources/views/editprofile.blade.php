@@ -28,7 +28,6 @@
             </div>
             <div class="col-6 pt-3">
                 <input class="shadow p-3 mb-4 bg-white rounded col-12" type="text" placeholder="Search jobs" style="width: 40rem; height: 2.5rem; margin-top: 0.4rem; padding-left: 1rem; border-radius: 7px; border-style: none; font-family: 'DM Sans';">
-                <!-- <i class="fa-solid fa-magnifying-glass" style="background-color: aqua; z-index: -1; margin-left: -2rem;"></i> -->
             </div>
             <div class="col-1" id="findajob" style="padding-top: 1.9rem;">
                 <i class="fa-solid fa-briefcase" style="font-size: 15px;"></i>
@@ -146,22 +145,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row" style="border-style: solid; width: 18.8rem; margin-left: 2rem; height: 26.5rem; border-radius: 15px; border-color: rgb(179, 179, 179);">
-            <div class="col-md-3">
-                <div class="profile-settings" style="margin-top: 3rem; margin-bottom: 2rem; margin-left: 1rem; background-color: none; width: 15rem; font-family: 'DM Sans';">
-                    <ul class="list-group">
-                        <a href="favorites.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; text-decoration: none; margin-bottom: 0.5rem;"><i class="fa-regular fa-heart" style="margin-left: 1rem; margin-right:1rem;"></i>Favorites<i class="fa-solid fa-chevron-right" style="margin-left: 4.5rem;"></i></button></a>
-                        <a href="ongoingjobs.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-bottom: 0.5rem;"><i class="fa-solid fa-briefcase" style="margin-left: 1rem; margin-right:1rem;"></i>Ongoing Jobs<i class="fa-solid fa-chevron-right" style="margin-left: 2.3rem;"></i></button></a>
-                        <a href="workhistory.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left;"><i class="fa-solid fa-book-bookmark" style="margin-left: 1rem; margin-right:1rem;"></i>Work History<i class="fa-solid fa-chevron-right" style="margin-left: 2.8rem;"></i></button></a>
-                    </ul>
-                    <h3 style="background-color: none; font-size: 22px; text-align: center; margin-top: 1.5rem; font-weight: 600;">Account Settings</h3>
-                    <ul class="list-group">
-                        <a href="editprofile.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-top: 1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-pencil" style="margin-left: 1rem; margin-right:1rem;"></i>Edit Profile<i class="fa-solid fa-chevron-right" style="margin-left: 3.7rem;"></i></button></a>
-                        <a href="settings.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: none; color: black; border-color: rgb(179, 179, 179); text-align: left; margin-bottom: 0.5rem;"><i class="fa-solid fa-gear" style="margin-left: 1rem; margin-right:1rem;"></i>Settings<i class="fa-solid fa-chevron-right" style="margin-left: 4.8rem;"></i></button></a>
-                        <a href="splashscreen.html"><button class="btn btn-primary btn-block" style="border-style: solid; background: rgba(251, 111, 111, 0.712); color: black; border-color: rgb(179, 179, 179); text-align: left; padding-left: 3.8rem;">Logout<i class="fa-solid fa-arrow-right-from-bracket" style="margin-left: 5.3rem;"></i></button></a>
-                    </ul>
-                </div>
-            </div> -->
+
         </div>
     </div>
     <footer class="footer" style="background-color: #516ed7; height: 30rem; margin-top: 5rem;">

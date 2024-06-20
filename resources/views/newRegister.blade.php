@@ -53,7 +53,7 @@
                                                 <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1.5rem;">Date of Birth</h3>
                                             </div>
                                             <div class="col-4 pt-3">
-                                                <!-- <input type="text" class=" birth_day form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="DD" style="height: 3.5rem; font-family:'DM Sans'; font-size:1rem;"> -->
+                                              
                                                 <input type="date" name="dob" class=" birth_day form-control shadow p-3 mb-4 bg-white rounded col-12" placeholder="DD/MM/YYYY" style="height: 3.5rem;">
                                             </div>
                                         </div>
@@ -123,7 +123,7 @@
                                         </div>
                                     </div>
                                     <div class="col-3 pt-3">
-                                        <button class="register-btn" style="margin-left: 23.6rem; margin-top: 3rem; background-color: #516ed7; color: #ffffff; height: 3.5rem; width: 10rem; font-family: 'DM Sans'; border-color: #516ed7; border-style: solid; border-radius: 5px; transition: 0.3s; align-content: center;" type="submit">Register</button>
+                                        <button class="register-btn" style="margin-left: 14.6rem; margin-top: 3rem; background-color: #516ed7; color: #ffffff; height: 3.5rem; width: 10rem; font-family: 'DM Sans'; border-color: #516ed7; border-style: solid; border-radius: 5px; transition: 0.3s; align-content: center;" type="submit">Register</button>
                                         <script>
                                             const registerButton = document.querySelector('.register-btn');
                                             registerButton.addEventListener('mouseover', function () {
@@ -143,14 +143,15 @@
                                             registerButton.addEventListener('click', handleRegister);
                                         </script>
                                     </div>
-                            </form>
                             <div class="col-12 pt-1">
-                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1rem; margin-left: 21.5rem;">
+                                <h3 class="display-6" style="font-family: 'DM Sans';font-weight: 500; padding-top: 0.5rem; font-size: 1rem; margin-left: 12.5rem;">
                                     Have an account?
                                     <a href="/login" style="text-decoration: underline; color:#516ed7;">Sign in here</a>
                                 </h3>
                             </div>
+                        
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>

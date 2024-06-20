@@ -41,36 +41,7 @@
             </div>
         </div>
 
-        <!-- <div class="row">
-            <div class="col-1"></div>
-            <div class="col-12">
-                <div class="container-fluid" style="height: 35rem;">
-                    <div class="container" style="background-color: pink; height: 35rem;">
-                        <div id="myCarousel" class="carousel slide" data-ride="false">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="image1.jpg" class="d-block w-100" alt="Image 1" style="height: 25rem; width: auto;">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="image2.jpg" class="d-block w-100" alt="Image 2" style="height: 25rem; width: auto;">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="image3.jpg" class="d-block w-100" alt="Image 3" style="height: 25rem; width: auto;">
-                              </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="margin-top: 8.5rem; margin-left: -3rem;">
-                              <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" style="margin-top: 8.5rem; margin-right: -3rem;">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+     
         <div class="down-part2">
          
         </div>
