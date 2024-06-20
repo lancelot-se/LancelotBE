@@ -5,16 +5,16 @@ Proyek ini merupakan bagian dari mata kuliah _Software Engineering_ (COMP6100001
 
 ## Output Proyek:
 - Aplikasi: Tautan proyek di platform Sistem Kontrol Versi.
-> - Laporan Proyek: Menggunakan template PKM.
- - Presentasi Proyek: Dalam bentuk slide atau video.
+- Laporan Proyek: Menggunakan template PKM.
+- Presentasi Proyek: Dalam bentuk slide atau video.
 
 ## Langkah - Langkah Penggunaan :
 1. Buka XAMPP, lalu start Apache dan MySQL.
 2. Buka admin (phpMyAdmin), lalu import file sql (lancelotnew.sql) ke dalam phpMyAdmin.
 3. Buka Explore dan buka folder htdocs
 4. Jalankan ```git clone https://github.com/lancelot-se/LancelotBE.git```
-5. Lalu buat file .env, lalu copy isi dari file .env.esample dan isi DB_DATABASE=nama_database (lancelotnew).
-6. Lalu jalankan command php artisan serve di terminal.
+5. Lalu buat file ```.env```, lalu copy isi dari file ```.env.esample``` dan isi ```DB_DATABASE=nama_database (lancelotnew)```.
+6. Lalu jalankan command ```php artisan serve``` di terminal.
 
 
 ## Software yang digunakan :
