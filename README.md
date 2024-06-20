@@ -4,9 +4,9 @@ Proyek ini merupakan bagian dari mata kuliah _Software Engineering_ (COMP6100001
 
 
 ## Output Proyek:
-⋅⋅*Aplikasi: Tautan proyek di platform Sistem Kontrol Versi.
-⋅⋅*Laporan Proyek: Menggunakan template PKM.
-⋅⋅*Presentasi Proyek: Dalam bentuk slide atau video.
+⋅⋅* Aplikasi: Tautan proyek di platform Sistem Kontrol Versi.
+⋅⋅* Laporan Proyek: Menggunakan template PKM.
+⋅⋅* Presentasi Proyek: Dalam bentuk slide atau video.
 
 ## Langkah - Langkah Penggunaan :
 1. Buka XAMPP, lalu start Apache dan MySQL.
