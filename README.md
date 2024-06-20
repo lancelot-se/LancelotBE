@@ -1,6 +1,8 @@
 # Lancelot Project Assignment
 
-Proyek ini merupakan bagian dari mata kuliah _Software Engineering_ (COMP6100001). Tujuan dari proyek ini adalah untuk mengembangkan software dengan mengikuti aturan SDLC yang tepat berdasarkan ide bisnis kreatif. Tema yang diangkat bisa bervariasi, termasuk: Makanan, Energi, Kesehatan, Transportasi, Maritim, Sosial Humaniora, Pendidikan, Seni dan Budaya, Multidisiplin, dan Sektor Lintas, sesuai dengan Tujuan Pembangunan Berkelanjutan (SDG). Lancelot ini termasuk ke dalam sektor Sosial Humaniora di mana LanceLot adalah sebuah aplikasi  berbasis website yang dirancang untuk menjadi jembatan antara pencari pekerjaan freelance dan pelanggan di Indonesia. Aplikasi ini diharapkan dapat menjadi solusi untuk menyediakan banyak peluang pekerjaan freelance bagi masyarakat Indonesia. Dengan LanceLot, kami menyediakan platform yang mudah digunakan, memungkinkan para freelancer menemukan peluang kerja sesuai dengan kriteria yang diinginkan, dan memudahkan pelanggan menemukan pekerja yang sesuai dengan kebutuhan mereka.
+<div style="text-align: justify">
+    Proyek ini merupakan bagian dari mata kuliah _Software Engineering_ (COMP6100001). Tujuan dari proyek ini adalah untuk mengembangkan software dengan mengikuti aturan SDLC yang tepat berdasarkan ide bisnis kreatif. Tema yang diangkat bisa bervariasi, termasuk: Makanan, Energi, Kesehatan, Transportasi, Maritim, Sosial Humaniora, Pendidikan, Seni dan Budaya, Multidisiplin, dan Sektor Lintas, sesuai dengan Tujuan Pembangunan Berkelanjutan (SDG). Lancelot ini termasuk ke dalam sektor Sosial Humaniora di mana LanceLot adalah sebuah aplikasi  berbasis website yang dirancang untuk menjadi jembatan antara pencari pekerjaan freelance dan pelanggan di Indonesia. Aplikasi ini diharapkan dapat menjadi solusi untuk menyediakan banyak peluang pekerjaan freelance bagi masyarakat Indonesia. Dengan LanceLot, kami menyediakan platform yang mudah digunakan, memungkinkan para freelancer menemukan peluang kerja sesuai dengan kriteria yang diinginkan, dan memudahkan pelanggan menemukan pekerja yang sesuai dengan kebutuhan mereka.
+</div>
 
 
 ## Output Proyek:
@@ -23,7 +25,8 @@ Proyek ini merupakan bagian dari mata kuliah _Software Engineering_ (COMP6100001
 - Visual Studio Code 1.90.2
 
 ## Framework yang digunakan :
-- Laravel 9
+- Laravel 10.48.11
+
 
 ## Programming Language yang digunakan :
 - php 8.1.10
