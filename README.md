@@ -10,11 +10,12 @@
 
 ## Langkah - Langkah Penggunaan :
 1. Buka XAMPP, lalu start Apache dan MySQL.
-2. Buka admin (phpMyAdmin), lalu import file sql (lancelotnew.sql) ke dalam phpMyAdmin.
-3. Buka Explore dan buka folder htdocs
-4. Jalankan ```git clone https://github.com/lancelot-se/LancelotBE.git```
-5. Lalu buat file ```.env```, lalu copy isi dari file ```.env.esample``` dan isi ```DB_DATABASE=nama_database (lancelotnew)```.
-6. Lalu jalankan command ```php artisan serve``` di terminal.
+2. Buka Explorer dan buka folder htdocs.
+3. Jalankan ```git clone https://github.com/lancelot-se/LancelotBE.git``` di terminal folder htdocs.
+4. Buka admin (phpMyAdmin) di XAMPP, lalu import file sql ```lancelotnew.sql``` ke dalam phpMyAdmin.
+5. Lalu di dalam folder yang sudah diclone buat file baru ```.env``` dan copy isi dari file ```.env.esample``` ke  dalam file ```.env```
+6. Di dalam file ```.env``` ubah ```DB_DATABASE=___``` menjadi  ```DB_DATABASE=lancelotnew```.
+7. Lalu jalankan command ```php artisan serve``` di terminal.
 
 
 ## Software yang digunakan :
